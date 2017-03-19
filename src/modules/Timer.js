@@ -3,11 +3,13 @@ export default class {
     constructor(options = {}){
         this.updateInterval = options.updateInterval || 1000;
         this.tickCallback = options.tickCallback || function () {};
-        this.tickCount = options.tickCount || 1;
+
         this.stop();
     }
 
-    start(){
+    tickFor(tickCount = 0){
+        this.tickCount = tickCount;
+        this.currentTick = 0;
 
         if (this.interval)
             this.stop();
@@ -19,7 +21,6 @@ export default class {
     }
 
     stop(){
-
         if (!this.interval)
             return this;
 
@@ -28,15 +29,15 @@ export default class {
 
         return this;
     }
-    
+
     update(){
-        if (this.tickCount === 0){
+        this.tickCallback(this.currentTick);
+
+        if (this.currentTick === this.tickCount){
             clearInterval(this.interval);
         }else{
-            this.tickCount--;
+            this.currentTick++;
         }
-
-        this.tickCallback();
 
         return this;
     }

@@ -20,18 +20,18 @@ describe('App', () => {
 
         expect(timer.updateInterval).to.equal(1000);
         expect(typeof timer.tickCallback).to.equal('function');
-        expect(timer.tickCount).to.equal(1);
     });
 
     it('should tick!', function (done) {
 
         const timer = new Timer({
             tickCallback: function () {
+                expect(timer.tickCount).to.equal(0);
                 done();
             }
         });
 
-        timer.start();
+        timer.tickFor();
     });
 
     it('should tick 9 times, every 100ms', function (done) {
@@ -40,7 +40,6 @@ describe('App', () => {
 
         const timer = new Timer({
             updateInterval: 10,//ms
-            tickCount: 9,
             tickCallback: function () {
                 if (dummyTickCount === 9) {
                     done();
@@ -50,7 +49,7 @@ describe('App', () => {
         });
 
         clock.tick(1);
-        timer.start();
+        timer.tickFor(9);
         clock.tick(1000);
 
     });

@@ -1,0 +1,63 @@
+@import "mixins";
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.led{
+  flex: 1 1 20%;
+  max-width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ledBulb{
+
+  @include breakpoint-small {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  @include breakpoint-medium {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  @include breakpoint-large {
+    width: 80px;
+    height: 80px;
+    font-size: 3em;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg,  $primary-lighter, $primary);
+  border: 15px solid $primary-darker;
+  border-radius: 100%;
+  box-shadow: 2px 3px 5px transparentize($primary-lighter, .8);
+  outline: none;
+}
+
+.off{
+  color: transparent;
+}
+
+.on {
+  background: linear-gradient(135deg,  $secondary-darker, $secondary);
+  box-shadow: 0 0 0 0 $secondary-lighter;
+  border-radius: 50%;
+  background-color: $secondary;
+  animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+  color: $secondary-darker;
+  z-index: 0;
+}
+
+
+
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
