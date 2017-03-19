@@ -1,0 +1,18 @@
+{
+  "name": "led-frenzy",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "neutrino start --presets neutrino-preset-web",
+    "build": "neutrino build --presets neutrino-preset-web",
+    "test": "neutrino test --presets neutrino-preset-web neutrino-preset-mocha -- --require ignore-styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "neutrino": "^4.3.1",
+    "neutrino-preset-mocha": "^4.2.0",
+    "neutrino-preset-web": "^4.2.3"
+  }
+}
