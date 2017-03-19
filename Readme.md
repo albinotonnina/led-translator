@@ -2,7 +2,7 @@
 
 http://led-translate.herokuapp.com/
 
-**tested only on Chrome/Safari**
+**tested only on Chrome/Safari/Firefox**
 
 ## Instructions
 
