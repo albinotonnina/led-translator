@@ -1,5 +1,6 @@
-const app = document.createElement('main');
-const text = document.createTextNode('Hello world!');
+import React from 'react';
+import { render } from 'react-dom';
 
-app.appendChild(text);
-document.getElementById('root').appendChild(app);
+import App from './modules/App';
+
+render(<App />, document.getElementById('root'));

@@ -1,18 +1,42 @@
 {
-  "name": "led-frenzy",
+  "name": "led_frenzy",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "neutrino start --presets neutrino-preset-web",
-    "build": "neutrino build --presets neutrino-preset-web",
-    "test": "neutrino test --presets neutrino-preset-web neutrino-preset-mocha -- --require ignore-styles"
-  },
-  "author": "",
+  "author": "Albino Tonnina",
   "license": "ISC",
   "devDependencies": {
-    "neutrino": "^4.3.1",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "classnames": "^2.2.5",
+    "enzyme": "^2.7.1",
+    "ignore-styles": "^5.0.1",
+    "neutrino": "^4.3.0",
     "neutrino-preset-mocha": "^4.2.0",
-    "neutrino-preset-web": "^4.2.3"
+    "neutrino-preset-node": "^4.2.2",
+    "neutrino-preset-react": "^4.2.3",
+    "node-sass": "^4.5.0",
+    "react-addons-test-utils": "^15.4.2",
+    "sass-loader": "^6.0.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "start": "neutrino start --presets neutrino-preset-react",
+    "build": "neutrino build --presets neutrino-preset-react",
+    "test": "neutrino test --presets neutrino-preset-react neutrino-preset-mocha -- --require ignore-styles"
+  },
+  "config": {
+    "html": {
+      "title": "Search results page"
+    },
+    "presets": [
+      "neutrino-preset-react",
+      "neutrino-preset-mocha",
+      "neutrino-custom.js"
+    ]
   }
 }
