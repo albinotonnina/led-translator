@@ -6,25 +6,25 @@
   "author": "Albino Tonnina",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-enzyme": "^0.6.1",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^0.8.0",
     "classnames": "^2.2.5",
-    "enzyme": "^2.7.1",
+    "enzyme": "^3.3.0",
     "ignore-styles": "^5.0.1",
-    "neutrino": "^4.3.0",
-    "neutrino-preset-mocha": "^4.2.0",
-    "neutrino-preset-node": "^4.2.2",
-    "neutrino-preset-react": "^4.2.3",
+    "neutrino": "^8.0.16",
+    "neutrino-preset-mocha": "^7.4.0",
+    "neutrino-preset-node": "^7.4.0",
+    "neutrino-preset-react": "^7.4.0",
     "node-sass": "^4.5.0",
     "react-addons-test-utils": "^15.4.2",
     "sass-loader": "^6.0.2",
-    "sinon": "^2.0.0",
-    "webpack": "^2.2.1"
+    "sinon": "^4.1.4",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "express": "^4.15.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "start": "neutrino start --presets neutrino-preset-react",
